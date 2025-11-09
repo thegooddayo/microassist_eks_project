@@ -1,4 +1,4 @@
-name: Dev Environment - Terraform
+name: Dev Environment - Terraform Deployment to EKS
 
 on:
   push:
