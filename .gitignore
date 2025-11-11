@@ -1,0 +1,26 @@
+# Terraform
+**/.terraform/*
+
+# tfstate
+*.tfstate
+*.tfstate.*
+.terraform.tfstate.lock.info
+
+# crash logs
+crash.log
+crash.*.log
+
+# overrides
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# variable files (sensitive)
+*.auto.tfvars
+terraform.tfvars
+
+# misc
+.DS_Store
+.idea/
+.vscode/
