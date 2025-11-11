@@ -2,19 +2,19 @@ All environments use the same S3 bucket (`eks-upgrade-demo-terraform-state`) wit
 
 ```bash
 aws s3api create-bucket \
-  --bucket eks-upgrade-demo-terraform-state \
+  --bucket dayo-eks-upgrade-demo-terraform-state \
   --region us-east-1
 
 aws s3api put-bucket-versioning \
-  --bucket eks-upgrade-demo-terraform-state \
+  --bucket dayo-eks-upgrade-demo-terraform-state \
   --versioning-configuration Status=Enabled
 
 aws s3api put-bucket-encryption \
-  --bucket eks-upgrade-demo-terraform-state \
+  --bucket dayo-eks-upgrade-demo-terraform-state \
   --server-side-encryption-configuration '{"Rules":[{"ApplyServerSideEncryptionByDefault":{"SSEAlgorithm":"AES256"},"BucketKeyEnabled":true}]}'
 
 aws s3api put-public-access-block \
-  --bucket eks-upgrade-demo-terraform-state \
+  --bucket dayo-eks-upgrade-demo-terraform-state \
   --public-access-block-configuration "BlockPublicAcls=true,IgnorePublicAcls=true,BlockPublicPolicy=true,RestrictPublicBuckets=true"
 ```
 This creates a single S3 bucket that all three environments (dev, stage, prod) will share, with:

@@ -40,7 +40,7 @@ aws s3api put-bucket-encryption \
 
 # Create DynamoDB table for state locking
 aws dynamodb create-table \
-  --table-name eks-upgrade-demo-terraform-locks \
+  --table-name dayo-eks-upgrade-demo-terraform-locks \
   --attribute-definitions AttributeName=LockID,AttributeType=S \
   --key-schema AttributeName=LockID,KeyType=HASH \
   --billing-mode PAY_PER_REQUEST \
